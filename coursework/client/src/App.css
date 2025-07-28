@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+/* Основные стили */
+body {
+  font-family: 'Pirata One', cursive; /* Применяем пиратский шрифт ко всему документу */
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 18px; /* Немного увеличиваем базовый размер шрифта */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Шапка */
+.pirate-header {
+  background-size: contain; /* Изменено с cover на contain */
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 0; /* Уменьшенный padding */
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  min-height: 200px; /* Фиксированная минимальная высота */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Фон на случай, если изображение прозрачное */
+}
+
+.pirate-header h1 {
+  font-family: 'Pirata One', cursive;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Подложка для лучшей читаемости */
+  border-radius: 5px;
+}
+
+/* Таблица */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-size: 1.2rem; /* Увеличиваем размер шрифта заголовков */
+}
+
+/* Кнопки */
+button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Pirata One', cursive; /* Пиратский шрифт для кнопок */
+  font-size: 1rem;
+}
+
+button.edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+button.add {
+  background-color: #2196F3;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Pirata One', cursive; /* Пиратский шрифт для полей ввода */
+  font-size: 1rem;
+}
+
+.form-actions {
+  margin-top: 20px;
+  text-align: right;
+}

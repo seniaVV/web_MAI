@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: grafana
+      POSTGRES_PASSWORD: grafana
+      POSTGRES_DB: analytics
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - C:\Users\Admin\Documents\Grafana\sql\ddl.sql:/docker-entrypoint-initdb.d/ddl.sql
+      - C:\Users\Admin\Documents\Grafana\sql\dml.sql:/docker-entrypoint-initdb.d/dml.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  grafana_data:
